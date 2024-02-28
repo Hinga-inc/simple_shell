@@ -1,0 +1,76 @@
+.TH man 1 "feb 28 2024" "1.0" "simple Shell Project"
+
+.SH NAME
+    hsh - ALX Simple Shell project: command line interpreter
+
+.SH SYNOPSIS
+hsh [filename]
+
+.SH COPYRIGHT
+    Public Domain, no copyright protection
+
+.SH DESCRIPTION
+.B hsh
+is a basic imitation of a command line interpreter that reads and implements basic commands from user input as a shell would.
+.PP
+.B hsh
+ is compiled on Ubuntu 20.04 LTS with gcc. It is built to run in both interactive and noninteractive mode.
+.PP
+.SH USER INPUT
+Once a user inputs a command and hits enter, the shell performs the following actions:
+
+1. Splits the command into an array of words.
+
+2. Looks for the command.
+
+3. Executes the command.
+.PP
+.SH SEARCH FOR COMMAND
+When locating a command, the shell looks for a built-in command by that name.
+If a built-in command is not found, the shell searches for the command in the PATH.
+.PP
+.SH EXECUTE COMMAND
+Commands are executed in a child process of the main process.
+.PP
+.SH BUILTINS
+.IP help
+Call help, display shell help
+.IP exit
+Exits process and frees memory allocated.
+.IP cd
+Change directories
+
+.SH EXAMPLES
+Below an example of interactive mode:
+
+.RS +4
+$ ./hsh
+.RE
+.RS +4
+($) /bin/ls
+.RE
+.RS +4
+hsh main.c shell.c
+.RE
+.RS +4
+($)
+.RE
+.RS +4
+($) exit
+.RE
+.RS +4
+$
+
+.SH BUGS
+No known bugs until now.
+
+.SH AUTHORS
+.PP
+hinga Peter - Hingapeter18@gmail.com
+.PP
+kevinM Njoroge - Kmburu007@gmail.com
+
+.PP
+.SH SEE ALSO
+.BR man
+.BR sh
